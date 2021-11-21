@@ -1,5 +1,0 @@
-com\design\payment\PaymentApplication.class
-META-INF\maven\com.design\payment-service\pom.properties
-com\design\payment\service\PaymentService.class
-META-INF\maven\com.design\payment-service\pom.xml
-com\design\payment\controller\PaymentController.class
