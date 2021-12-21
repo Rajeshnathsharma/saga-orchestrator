@@ -44,6 +44,11 @@ public class OrchestratorResponseDTO {
 	public void setStatus(OrderStatus status) {
 		this.status = status;
 	}
+	@Override
+	public String toString() {
+		return "OrchestratorResponseDTO [userId=" + userId + ", productId=" + productId + ", orderId=" + orderId
+				+ ", amount=" + amount + ", status=" + status + "]";
+	}
     
     
 

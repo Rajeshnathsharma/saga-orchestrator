@@ -36,6 +36,13 @@ public class PaymentResponseDTO {
 	public void setStatus(PaymentStatus status) {
 		this.status = status;
 	}
+	@Override
+	public String toString() {
+		return "PaymentResponseDTO [userId=" + userId + ", orderId=" + orderId + ", amount=" + amount + ", status="
+				+ status + "]";
+	}
+	
+	
     
     
 }

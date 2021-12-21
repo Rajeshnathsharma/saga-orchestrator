@@ -36,12 +36,15 @@ public class InventoryService {
             responseDTO.setStatus(InventoryStatus.AVAILABLE);
             this.productInventoryMap.put(requestDTO.getProductId(), quantity - 1);
         }
+        System.out.println("InventoryResponse: " + responseDTO);
+        System.out.println("Inside deduct Inventory, productInventoryMap: " + productInventoryMap);
         return responseDTO;
     }
 
     public void addInventory(final InventoryRequestDTO requestDTO){
         this.productInventoryMap
                 .computeIfPresent(requestDTO.getProductId(), (k, v) -> v + 1);
+        System.out.println("Inside add Inventory, productInventoryMap: " + productInventoryMap);
     }
 
 }

@@ -37,6 +37,13 @@ public class InventoryResponseDTO {
 	public void setStatus(InventoryStatus status) {
 		this.status = status;
 	}
+	@Override
+	public String toString() {
+		return "InventoryResponseDTO [orderId=" + orderId + ", userId=" + userId + ", productId=" + productId
+				+ ", status=" + status + "]";
+	}
+	
+	
     
     
 

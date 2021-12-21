@@ -1,5 +1,14 @@
-server:
-  port: 8080
+spring:
+   datasource:
+     url: jdbc:h2:mem:testdb
+     driverClassName: org.h2.Driver
+     username: admin
+     password: admin          
+   jpa: 
+     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+   h2:
+     console.enabled: true
+     console.path: /h2-console
 spring.cloud.stream:
   function:
     definition: supplier;consumer
@@ -8,3 +17,4 @@ spring.cloud.stream:
       destination: order-created
     consumer-in-0:
       destination: order-updated
+         

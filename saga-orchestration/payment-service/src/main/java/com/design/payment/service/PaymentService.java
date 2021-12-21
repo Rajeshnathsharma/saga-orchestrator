@@ -34,11 +34,14 @@ public class PaymentService {
             responseDTO.setStatus(PaymentStatus.PAYMENT_APPROVED);
             this.userBalanceMap.put(requestDTO.getUserId(), balance - requestDTO.getAmount());
         }
+        System.out.println("PaymentResponse: " + responseDTO);
+        System.out.println("Inside debit userBalanceMap: " + userBalanceMap);
         return responseDTO;
     }
 
     public void credit(final PaymentRequestDTO requestDTO){
         this.userBalanceMap.computeIfPresent(requestDTO.getUserId(), (k, v) -> v + requestDTO.getAmount());
+        System.out.println("Inside credit userBalanceMap: " + userBalanceMap);
     }
 
 }
